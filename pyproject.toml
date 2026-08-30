@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rps-game-python-engine"
+version = "0.1.0"
+authors = [
+  { name = "Manjas Anand" }
+]
+description = "The ultra-realistic Nvidia Rock-Paper-Scissors simulator engine"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/manjasanand08/rps-game-python-engine"
+"Bug Tracker" = "https://github.com/manjasanand08/rps-game-python-engine/issues"
+
+[project.scripts]
+rps-game = "rps_game_engine.cli:play"
