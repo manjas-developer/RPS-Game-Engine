@@ -1,30 +1,36 @@
-name: Publish to PyPI 📦🚀
+name: Publish Python Package to PyPI 📦🚀
 
 on:
   release:
     types: [published]
-  workflow_dispatch:
+  workflow_dispatch: # Enables manual 'Run workflow' button in Actions tab 🔘⚡
 
 jobs:
-  deploy:
+  build-and-publish:
+    name: Build and publish distribution 🐍📦
     runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/rps-game-python-engine
     permissions:
-      id-token: write
+      id-token: write # Mandatory for secure PyPI Trusted Publishing 🔒
 
     steps:
-      - name: Checkout Code 🛎️
+      - name: Checkout Source Code 🛎️
         uses: actions/checkout@v4
 
-      - name: Set up Python 🐍
+      - name: Set up Python 3.11 🐍
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Install Build Tools 🛠️
-        run: pip install build twine
+        run: |
+          python -m pip install --upgrade pip
+          pip install build
 
-      - name: Build Source and Wheel Distribution 📦
+      - name: Build Source & Wheel Archives 📦
         run: python -m build
 
-      - name: Publish to PyPI 🚀✨
+      - name: Publish Package to PyPI 🚀✨
         uses: pypa/gh-action-pypi-publish@release/v1
