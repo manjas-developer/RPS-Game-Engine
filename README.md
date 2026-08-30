@@ -49,15 +49,14 @@ rps-game-python-engine/
 
 ### 💻 Installation & Execution
 
-1. **Clone the repository:**
+1. **Install the PYPI Package:**
    ```bash
-   git clone https://github.com/manjasanand08/rps-game-python-engine.git
-   cd rps-game-python-engine
+   pip install --upgrade rps-game-python-engine
    ```
 
 2. **Run the game engine:**
    ```bash
-   python main.py
+   rps-game
    ```
 
 ---
