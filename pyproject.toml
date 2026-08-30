@@ -20,8 +20,8 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/manjasanand08/rps-game-python-engine"
-"Bug Tracker" = "https://github.com/manjasanand08/rps-game-python-engine/issues"
+"Homepage" = "https://github.com/manjas-developer/RPS-Game-Engine"
+"Bug Tracker" = "https://github.com/manjas-developer/RPS-Game-Engine/issues"
 
 [project.scripts]
 rps-game = "rps_game_engine.cli:play"
