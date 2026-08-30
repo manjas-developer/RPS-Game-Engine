@@ -8,6 +8,10 @@
 [![Win Rate](https://img.shields.io/badge/Player%20Win%20Rate-0%25-red.svg)]()
 
 ---
+[![Buy Me A Chai](https://img.shields.io/badge/Support%20Me-Donate-orange.svg?logo=buy-me-a-coffee)](https://buymeachai.com/manjasanand08)
+
+
+---
 
 ## 🌟 Overview 📖
 
