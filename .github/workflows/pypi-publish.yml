@@ -3,7 +3,7 @@ name: Publish Python Package to PyPI 📦🚀
 on:
   release:
     types: [published]
-  workflow_dispatch: # Enables manual 'Run workflow' button in Actions tab 🔘⚡
+  workflow_dispatch:
 
 jobs:
   build-and-publish:
@@ -13,7 +13,7 @@ jobs:
       name: pypi
       url: https://pypi.org/p/rps-game-python-engine
     permissions:
-      id-token: write # Mandatory for secure PyPI Trusted Publishing 🔒
+      id-token: write
 
     steps:
       - name: Checkout Source Code 🛎️
@@ -29,7 +29,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install build
 
-      - name: Build Source & Wheel Archives 📦
+      - name: Build Archives 📦
         run: python -m build
 
       - name: Publish Package to PyPI 🚀✨
