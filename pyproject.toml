@@ -24,4 +24,7 @@ classifiers = [
 "Bug Tracker" = "https://github.com/manjas-developer/RPS-Game-Engine/issues"
 
 [project.scripts]
-rps-game = "rps_game_engine.cli:play"
+rps-game = "main:play"
+
+[tool.setuptools]
+py-modules = ["main"]
