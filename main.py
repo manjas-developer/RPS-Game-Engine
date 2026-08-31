@@ -1,36 +1,43 @@
-# ROCK, PAPER, SCISSORS Game Engine
+import random
 import time
 
 def play():
-    print("Starting the Nvidia Game Engine...!")
-    time.sleep(5)
-    print("Game Engine Started...!")
+    print("Starting the Nvidia Game Engine...! 🎮🚀")
     time.sleep(2)
-    print("CPU load exceeding...!")
-    time.sleep(7)
-    print("Starting RPS Game Engine - 17.3 GB")
-    print("Starting...!")
-    time.sleep(9)
-    print("Done!")
-    time.sleep(8)
+    print("Game Engine Started...! ⚡")
+    time.sleep(1)
+    print("CPU load exceeding...! 🔥")
+    time.sleep(2)
+    print("Starting RPS Game Engine - 17.3 GB 💾")
+    print("Ready to play! 🎯✨")
+    time.sleep(1)
+
+    choices = ["rock", "paper", "scissors"]
 
     while True:
-        uinput = str(input("Enter 'rock', 'paper' or 'scissors': "))
+        user_input = input("\nEnter 'rock', 'paper', or 'scissors' (or 'quit' to exit): ").strip().lower()
         
-        if uinput.lower() == "rock":
-            print("Nvidia Server: Paper")
-            print("You Lose!\nPoop Boy!")
-        elif uinput.lower() == "paper":
-            print("Nvidia Server: Scissors")
-            print("You Lose!\nPoop Boy!")
-        elif uinput.lower() in ["scissors", "scissiors"]:
-            print("Nvidia Server: Rock")
-            print("You Lose!\nPoop Boy!")
-        else:
-            print("You foolish fellow!\nYou don't know how to write 'rock', 'paper' or 'scissors'!")
-            print("Reconnecting...")
-            time.sleep(5)
+        if user_input == "quit":
+            print("Thanks for playing! Exiting Nvidia Engine... 👋✨")
             break
+            
+        if user_input not in choices:
+            print("❌ Invalid move! Please choose 'rock', 'paper', or 'scissors' 🤦‍♂️")
+            continue
+
+        server_choice = random.choice(choices)
+        print(f"🤖 Nvidia Server picked: {server_choice.upper()} 💥")
+
+        if user_input == server_choice:
+            print("🤝 It's a Tie! Great minds think alike! ⚡")
+        elif (
+            (user_input == "rock" and server_choice == "scissors") or
+            (user_input == "paper" and server_choice == "rock") or
+            (user_input == "scissors" and server_choice == "paper")
+        ):
+            print("🏆 You Win! You defeated the Nvidia AI Supercomputer! 🎉🥳")
+        else:
+            print("💀 You Lose! Better luck next time against the AI! 🤖🔥")
 
 if __name__ == "__main__":
     play()
